@@ -19,22 +19,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaylistTableViewCell" rowHeight="202" id="ARn-7C-6Sn" customClass="PlaylistTableViewCell" customModule="App_Works_Midterm" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="202"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaylistTableViewCell" id="ARn-7C-6Sn" customClass="PlaylistTableViewCell" customModule="App_Works_Midterm" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ARn-7C-6Sn" id="rB0-72-8bS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="202"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bPV-RW-Wgf">
-                                                    <rect key="frame" x="20" y="10" width="182" height="182"/>
+                                                    <rect key="frame" x="20" y="10" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="ET5-vq-zLe"/>
                                                         <constraint firstAttribute="width" secondItem="bPV-RW-Wgf" secondAttribute="height" multiplier="1:1" id="OAb-lB-Q4s"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhu-p8-Q5F">
-                                                    <rect key="frame" x="374" y="91" width="20" height="20"/>
+                                                    <rect key="frame" x="374" y="40" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="2Ul-YR-zPP"/>
                                                         <constraint firstAttribute="width" secondItem="Fhu-p8-Q5F" secondAttribute="height" multiplier="1:1" id="ThC-70-6jS"/>
@@ -47,17 +47,25 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aac-Th-Zuw">
-                                                    <rect key="frame" x="222" y="89" width="132" height="24"/>
+                                                    <rect key="frame" x="120" y="38" width="234" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNC-0N-108">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="aac-Th-Zuw" firstAttribute="centerY" secondItem="rB0-72-8bS" secondAttribute="centerY" id="1D3-07-mgr"/>
+                                                <constraint firstAttribute="bottom" secondItem="bNC-0N-108" secondAttribute="bottom" id="5w6-Dq-l7B"/>
                                                 <constraint firstAttribute="bottom" secondItem="bPV-RW-Wgf" secondAttribute="bottom" constant="10" id="9Zu-x9-uRC"/>
+                                                <constraint firstItem="bNC-0N-108" firstAttribute="trailing" secondItem="rB0-72-8bS" secondAttribute="trailing" id="FmV-Zg-TDn"/>
+                                                <constraint firstItem="bNC-0N-108" firstAttribute="leading" secondItem="rB0-72-8bS" secondAttribute="leading" id="IBf-z8-SPa"/>
                                                 <constraint firstItem="bPV-RW-Wgf" firstAttribute="leading" secondItem="rB0-72-8bS" secondAttribute="leading" constant="20" id="XtW-3J-cTA"/>
                                                 <constraint firstItem="Fhu-p8-Q5F" firstAttribute="leading" secondItem="aac-Th-Zuw" secondAttribute="trailing" constant="20" id="aYU-ic-DRB"/>
+                                                <constraint firstItem="bNC-0N-108" firstAttribute="top" secondItem="rB0-72-8bS" secondAttribute="top" id="ajh-2R-3Il"/>
                                                 <constraint firstAttribute="trailing" secondItem="Fhu-p8-Q5F" secondAttribute="trailing" constant="20" id="bp7-Ay-qFG"/>
                                                 <constraint firstItem="aac-Th-Zuw" firstAttribute="leading" secondItem="bPV-RW-Wgf" secondAttribute="trailing" constant="20" id="jeL-up-T4I"/>
                                                 <constraint firstItem="Fhu-p8-Q5F" firstAttribute="centerY" secondItem="rB0-72-8bS" secondAttribute="centerY" id="slq-Ne-nCL"/>
@@ -67,6 +75,7 @@
                                         <connections>
                                             <outlet property="albumImageView" destination="bPV-RW-Wgf" id="y37-B3-KdY"/>
                                             <outlet property="albumNameLabel" destination="aac-Th-Zuw" id="tVc-d3-uqq"/>
+                                            <outlet property="alphaView" destination="bNC-0N-108" id="UVr-7T-yix"/>
                                             <outlet property="favoriteButton" destination="Fhu-p8-Q5F" id="w9t-oS-LgQ"/>
                                         </connections>
                                     </tableViewCell>

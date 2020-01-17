@@ -17,6 +17,8 @@ class PlaylistTableViewCell: UITableViewCell {
     
     @IBOutlet weak var favoriteButton: UIButton!
     
+    @IBOutlet weak var alphaView: UIView!
+    
     var playlist: Playlist? {
         didSet {
             guard let playlist = playlist else { return }

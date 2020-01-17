@@ -1,22 +1,18 @@
 PODS:
-  - ESPullToRefresh (2.9)
   - Kingfisher (5.12.0):
     - Kingfisher/Core (= 5.12.0)
   - Kingfisher/Core (5.12.0)
 
 DEPENDENCIES:
-  - ESPullToRefresh
   - Kingfisher (~> 5.0)
 
 SPEC REPOS:
   trunk:
-    - ESPullToRefresh
     - Kingfisher
 
 SPEC CHECKSUMS:
-  ESPullToRefresh: ce058a36454a5032519cc9d8b45da217728cf104
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
 
-PODFILE CHECKSUM: 48de51af625c8ded396a50ed8c337dfd2b5b49c7
+PODFILE CHECKSUM: 3146bb8a2b8be596e7ed4e4144534f0bf683e8a6
 
 COCOAPODS: 1.8.4
