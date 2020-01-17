@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5244DAC043495EC0FAA51347 /* Pods_App_Works_Midterm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F608A82DDF3F124663E32B6F /* Pods_App_Works_Midterm.framework */; };
 		CF1D8DDA23D1445000A601BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D8DD923D1445000A601BF /* AppDelegate.swift */; };
-		CF1D8DDC23D1445000A601BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D8DDB23D1445000A601BF /* SceneDelegate.swift */; };
 		CF1D8DDE23D1445000A601BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D8DDD23D1445000A601BF /* ViewController.swift */; };
 		CF1D8DE123D1445000A601BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1D8DDF23D1445000A601BF /* Main.storyboard */; };
 		CF1D8DE323D1445100A601BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1D8DE223D1445100A601BF /* Assets.xcassets */; };
@@ -16,14 +16,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B94F47C7B833B5A7BB7FBED6 /* Pods-App Works Midterm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Works Midterm.release.xcconfig"; path = "Target Support Files/Pods-App Works Midterm/Pods-App Works Midterm.release.xcconfig"; sourceTree = "<group>"; };
 		CF1D8DD623D1445000A601BF /* App Works Midterm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Works Midterm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF1D8DD923D1445000A601BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF1D8DDB23D1445000A601BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF1D8DDD23D1445000A601BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF1D8DE023D1445000A601BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF1D8DE223D1445100A601BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1D8DE523D1445100A601BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF1D8DE723D1445100A601BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0BB69B9F4F55AB185FB974 /* Pods-App Works Midterm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Works Midterm.debug.xcconfig"; path = "Target Support Files/Pods-App Works Midterm/Pods-App Works Midterm.debug.xcconfig"; sourceTree = "<group>"; };
+		F608A82DDF3F124663E32B6F /* Pods_App_Works_Midterm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Works_Midterm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5244DAC043495EC0FAA51347 /* Pods_App_Works_Midterm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		863A5CA88CC3A0C9FA3ECD0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F608A82DDF3F124663E32B6F /* Pods_App_Works_Midterm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF1D8DCD23D1445000A601BF = {
 			isa = PBXGroup;
 			children = (
 				CF1D8DD823D1445000A601BF /* App Works Midterm */,
 				CF1D8DD723D1445000A601BF /* Products */,
+				DF297626F9E3A52D241C6A4E /* Pods */,
+				863A5CA88CC3A0C9FA3ECD0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				CF1D8DD923D1445000A601BF /* AppDelegate.swift */,
-				CF1D8DDB23D1445000A601BF /* SceneDelegate.swift */,
 				CF1D8DDD23D1445000A601BF /* ViewController.swift */,
 				CF1D8DDF23D1445000A601BF /* Main.storyboard */,
 				CF1D8DE223D1445100A601BF /* Assets.xcassets */,
@@ -67,6 +79,16 @@
 			path = "App Works Midterm";
 			sourceTree = "<group>";
 		};
+		DF297626F9E3A52D241C6A4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA0BB69B9F4F55AB185FB974 /* Pods-App Works Midterm.debug.xcconfig */,
+				B94F47C7B833B5A7BB7FBED6 /* Pods-App Works Midterm.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF1D8DEA23D1445100A601BF /* Build configuration list for PBXNativeTarget "App Works Midterm" */;
 			buildPhases = (
+				7961FACBBA5AF88D49B0A147 /* [CP] Check Pods Manifest.lock */,
 				CF1D8DD223D1445000A601BF /* Sources */,
 				CF1D8DD323D1445000A601BF /* Frameworks */,
 				CF1D8DD423D1445000A601BF /* Resources */,
+				D337CE41F3FBEA5FBF566242 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +157,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7961FACBBA5AF88D49B0A147 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-App Works Midterm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D337CE41F3FBEA5FBF566242 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App Works Midterm/Pods-App Works Midterm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-App Works Midterm/Pods-App Works Midterm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-App Works Midterm/Pods-App Works Midterm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF1D8DD223D1445000A601BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,7 +206,6 @@
 			files = (
 				CF1D8DDE23D1445000A601BF /* ViewController.swift in Sources */,
 				CF1D8DDA23D1445000A601BF /* AppDelegate.swift in Sources */,
-				CF1D8DDC23D1445000A601BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +347,7 @@
 		};
 		CF1D8DEB23D1445100A601BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA0BB69B9F4F55AB185FB974 /* Pods-App Works Midterm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +365,7 @@
 		};
 		CF1D8DEC23D1445100A601BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B94F47C7B833B5A7BB7FBED6 /* Pods-App Works Midterm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
