@@ -15,6 +15,8 @@
 		CF1D8DE623D1445100A601BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1D8DE423D1445100A601BF /* LaunchScreen.storyboard */; };
 		CF6FDA0823D147EA009B9413 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FDA0723D147EA009B9413 /* HTTPClient.swift */; };
 		CF6FDA0A23D14E64009B9413 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FDA0923D14E64009B9413 /* UserProvider.swift */; };
+		CF6FDA0C23D16E3C009B9413 /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FDA0B23D16E3C009B9413 /* PlaylistTableViewCell.swift */; };
+		CF6FDA0E23D171CE009B9413 /* PlaylistProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6FDA0D23D171CE009B9413 /* PlaylistProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CF1D8DE723D1445100A601BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF6FDA0723D147EA009B9413 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		CF6FDA0923D14E64009B9413 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
+		CF6FDA0B23D16E3C009B9413 /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
+		CF6FDA0D23D171CE009B9413 /* PlaylistProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistProvider.swift; sourceTree = "<group>"; };
 		DA0BB69B9F4F55AB185FB974 /* Pods-App Works Midterm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Works Midterm.debug.xcconfig"; path = "Target Support Files/Pods-App Works Midterm/Pods-App Works Midterm.debug.xcconfig"; sourceTree = "<group>"; };
 		F608A82DDF3F124663E32B6F /* Pods_App_Works_Midterm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Works_Midterm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,12 +77,14 @@
 		CF1D8DD823D1445000A601BF /* App Works Midterm */ = {
 			isa = PBXGroup;
 			children = (
-				CF1D8DD923D1445000A601BF /* AppDelegate.swift */,
-				CF1D8DDD23D1445000A601BF /* ViewController.swift */,
 				CF6FDA0723D147EA009B9413 /* HTTPClient.swift */,
 				CF6FDA0923D14E64009B9413 /* UserProvider.swift */,
+				CF6FDA0D23D171CE009B9413 /* PlaylistProvider.swift */,
+				CF1D8DDD23D1445000A601BF /* ViewController.swift */,
+				CF6FDA0B23D16E3C009B9413 /* PlaylistTableViewCell.swift */,
 				CF1D8DDF23D1445000A601BF /* Main.storyboard */,
 				CF1D8DE223D1445100A601BF /* Assets.xcassets */,
+				CF1D8DD923D1445000A601BF /* AppDelegate.swift */,
 				CF1D8DE423D1445100A601BF /* LaunchScreen.storyboard */,
 				CF1D8DE723D1445100A601BF /* Info.plist */,
 			);
@@ -209,9 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6FDA0C23D16E3C009B9413 /* PlaylistTableViewCell.swift in Sources */,
 				CF1D8DDE23D1445000A601BF /* ViewController.swift in Sources */,
 				CF1D8DDA23D1445000A601BF /* AppDelegate.swift in Sources */,
 				CF6FDA0823D147EA009B9413 /* HTTPClient.swift in Sources */,
+				CF6FDA0E23D171CE009B9413 /* PlaylistProvider.swift in Sources */,
 				CF6FDA0A23D14E64009B9413 /* UserProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

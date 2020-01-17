@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 class UserProvider {
     
@@ -39,8 +38,10 @@ class UserProvider {
 
                 do {
                     let response = try strongSelf.decoder.decode(ClientResponse.self, from: data)
-                    print(response)
-                    //UserDefaults.standard.set(response.accessToken, forKey: "KKBOXAccessToken")
+                    
+                    UserDefaults.standard.set(response.accessToken, forKey: "KKBOXAccessToken")
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name("getToken"), object: nil)
 
                 } catch {
                     print("get token decode error: \(error)")
