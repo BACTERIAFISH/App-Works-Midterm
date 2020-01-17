@@ -16,9 +16,9 @@ class PlaylistProvider {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
 
-    func getPlaylist(completion: @escaping (Result<[Playlist], Error>) -> Void) {
+    func getPlaylist(offset: Int, completion: @escaping (Result<PlaylistData, Error>) -> Void) {
 
-        let urlString = "https://api.kkbox.com/v1.1/new-hits-playlists/DZrC8m29ciOFY2JAm3/tracks?territory=TW&limit=20"
+        let urlString = "https://api.kkbox.com/v1.1/new-hits-playlists/DZrC8m29ciOFY2JAm3/tracks?territory=TW&limit=20&offset=\(offset)"
 
         guard let url = URL(string: urlString) else { return }
 
@@ -42,7 +42,7 @@ class PlaylistProvider {
                     let response = try strongSelf.decoder.decode(PlaylistData.self, from: data)
                     
                     DispatchQueue.main.async {
-                        completion(Result.success(response.data))
+                        completion(Result.success(response))
                     }
 
                 } catch {
@@ -59,6 +59,8 @@ class PlaylistProvider {
 
 struct PlaylistData: Codable {
     let data: [Playlist]
+    let paging: Paging
+    let summary: Summary
 }
 
 struct Playlist: Codable {
@@ -95,4 +97,15 @@ struct Artist: Codable {
     let name: String
     let url: String
     let images: [PlaylistImage]
+}
+
+struct Paging: Codable {
+    let offset: Int
+    let limit: Int
+    let previous: String?
+    let next: String?
+}
+
+struct Summary: Codable {
+    let total: Int
 }

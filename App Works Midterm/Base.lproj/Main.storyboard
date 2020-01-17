@@ -42,6 +42,9 @@
                                                     <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="heart" catalog="system"/>
                                                     <state key="selected" image="heart.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonPressed:" destination="ARn-7C-6Sn" eventType="touchUpInside" id="ZzP-TW-frR"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aac-Th-Zuw">
                                                     <rect key="frame" x="222" y="89" width="132" height="24"/>

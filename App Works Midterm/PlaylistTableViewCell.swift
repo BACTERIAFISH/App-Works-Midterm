@@ -36,4 +36,8 @@ class PlaylistTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func favoriteButtonPressed(_ sender: UIButton) {
+        sender.isSelected.toggle()
+    }
+    
 }

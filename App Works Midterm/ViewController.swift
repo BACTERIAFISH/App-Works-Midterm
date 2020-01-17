@@ -17,6 +17,10 @@ class ViewController: UIViewController {
     let playlistProvider = PlaylistProvider()
     
     var playlists = [Playlist]()
+    
+    var isLoading = false
+    
+    var maxPlaylists: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +36,21 @@ class ViewController: UIViewController {
     }
     
     @objc func getPlaylist() {
-        playlistProvider.getPlaylist { [weak self] (result) in
-            switch result {
-            case .success(let newPlaylists):
-                self?.playlists = newPlaylists
-                self?.playlistTableView.reloadData()
-            case .failure(let error):
-                print("get playlist error: \(error)")
+        if !isLoading {
+            isLoading = true
+            playlistProvider.getPlaylist(offset: playlists.count) { [weak self] (result) in
+                switch result {
+                case .success(let playlistData):
+                    self?.playlists += playlistData.data
+                    self?.playlistTableView.reloadData()
+                    if self?.maxPlaylists == nil {
+                        self?.maxPlaylists = playlistData.summary.total
+                    }
+                    self?.isLoading = false
+                case .failure(let error):
+                    print("get playlist error: \(error)")
+                    self?.isLoading = false
+                }
             }
         }
     }
@@ -70,4 +82,15 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == playlists.count - 1 {
+            if let max = maxPlaylists, playlists.count < max {
+                getPlaylist()
+            }
+        }
+    }
+    
+//    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        print("2222")
+//    }
 }
