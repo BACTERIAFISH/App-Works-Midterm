@@ -23,8 +23,6 @@ class ViewController: UIViewController {
     var maxPlaylists: Int?
     
     var headerImageView: UIImageView?
-    
-    var headerImageViewTopConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
