@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     var maxPlaylists: Int?
     
-    var headerImageView: UIImageView!
+    var headerImageView: UIImageView?
     
     var headerImageViewTopConstraint: NSLayoutConstraint!
 
@@ -31,10 +31,9 @@ class ViewController: UIViewController {
         
         playlistTableView.dataSource = self
         playlistTableView.delegate = self
+        playlistTableView.contentInset = UIEdgeInsets(top: view.bounds.width, left: 0, bottom: 0, right: 0)
         
         createTableViewHeader()
-        
-        playlistTableView.tableHeaderView = headerImageView
         
         userProvider.getToken()
         
@@ -65,29 +64,13 @@ class ViewController: UIViewController {
 
         headerImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.width))
 
+        guard let headerImageView = headerImageView else { return }
+        
         headerImageView.kf.setImage(with: URL(string: "https://i.kfs.io/playlist/global/26541395v266/cropresize/600x600.jpg"))
 
         view.addSubview(headerImageView)
     }
     
-//    func createTableViewHeader() {
-//
-//        headerImageView = UIImageView()
-//        headerImageView.translatesAutoresizingMaskIntoConstraints = false
-//
-//        headerImageView.kf.setImage(with: URL(string: "https://i.kfs.io/playlist/global/26541395v266/cropresize/600x600.jpg"))
-//
-//        view.addSubview(headerImageView)
-//
-//        headerImageViewTopConstraint = headerImageView.topAnchor.constraint(equalTo: view.topAnchor)
-//
-//        NSLayoutConstraint.activate([
-//            headerImageViewTopConstraint,
-//            headerImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            headerImageView.widthAnchor.constraint(equalTo: view.widthAnchor),
-//            headerImageView.heightAnchor.constraint(equalTo: headerImageView.widthAnchor)
-//        ])
-//    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -130,12 +113,37 @@ extension ViewController: UITableViewDelegate {
 extension ViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //print(scrollView.contentOffset)
         
-        if scrollView.contentOffset.y < 0 {
+        guard let headerImageView = headerImageView else { return }
+        
+        let width = view.bounds.width
+        
+        let offset = scrollView.contentOffset.y
+        
+        if offset < -width {
             
-          
+            let stretch = -offset
+            
+            let x = (offset + width) / 2
+            
+            headerImageView.frame = CGRect(x: x, y: 0, width: stretch, height: stretch)
+            
+        } else if offset < 0 {
+            
+            let y = -offset - width
+            
+            let alpha = -offset / width
+            
+            headerImageView.frame.origin.y = y
+            
+            headerImageView.alpha = alpha
+            
+        } else {
+            
+            headerImageView.frame.origin.y = -width - 10
+            
         }
+        
     }
     
 }
