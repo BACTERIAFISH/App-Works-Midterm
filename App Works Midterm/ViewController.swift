@@ -91,7 +91,7 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? PlaylistTableViewCell {
             let animator = UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) {
-                cell.alphaView.alpha = 0
+                cell.contentView.alpha = 1
             }
             animator.startAnimation()
         }
@@ -105,7 +105,7 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? PlaylistTableViewCell {
-            cell.alphaView.alpha = 0.9
+            cell.contentView.alpha = 0
         }
     }
 }
